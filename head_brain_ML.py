@@ -14,11 +14,6 @@ model.compile(optimizer=tf.keras.optimizers.Adam(0.1), loss='mean_squared_error'
 
 history = model.fit(head_size, brain_weight, epochs=500, verbose=False)
 
-import matplotlib.pyplot as plt
-plt.xlabel('Epoch Number')
-plt.ylabel("Loss Magnitude")
-plt.plot(history.history['loss'])
-
 print(model.predict([3832]))
 
 print("These are the layer variables: {}".format(l0.get_weights()))
